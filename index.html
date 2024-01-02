@@ -3,11 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <button class="start">start</button>
+
+    <button class="start hover-pointer">START GAME</button>
+
+    <div class="disable">
+        <h2>
+            GAME OVER! <span id="winner"></span> WON!
+        </h2>
+        <button class="reload hover-pointer">RELOAD</button>
+    </div>
+    <div id="game-screen">
+        <div id="players-container">
+            <div id="player" class="player">
+                <p class="name">You</p>
+                <p class="score">0</p>
+                <p>You chose: <br>
+                    <span style="text-align: center;" id="player-choice"></span>
+                </p>
+                
+            </div>
+            <h2 class="detail">Click a button below to start</h2>
+            <div id="computer" class="player">
+                <p class="name">Computer</p>
+                <p class="score">0</p>
+                <p>Computer chose: <span id="computer-choice"></span></p>
+            </div>
+        </div>
+        <div id="lower-container">
+            <div id="rock">
+                <button class="option hover-pointer" value="Rock">
+                    <img src="images/rock.png" alt="image of a rock">
+                </button>
+            </div>
+            <div id="paper">
+                <button class="option hover-pointer" value="Paper">
+                    <img src="images/paper.png" alt="image of a piece of paper">
+                </button>
+            </div>
+            <div id="scissors">
+                <button class="option hover-pointer" value="Scissors">
+                    <img src="images/scissor.png" alt="image of a pair of scissors">
+                </button>
+            </div>
+        </div>
+    </div>
     <script src="code.js"></script>
 </body>
 </html>
